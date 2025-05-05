@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+/* 共通 */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #333;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d4af37;
+}
+
+.hero {
+  height: 100vh;
+  background: url("https://source.unsplash.com/1600x900/?salon") center/cover
+    no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  animation: fadeBg 15s infinite alternate;
+}
+
+@keyframes fadeBg {
+  0% {
+    background-image: url("/images/salon-site/salon-site1.jpg");
+  }
+  50% {
+    background-image: url("/images/salon-site/salon-site2.jpg");
+  }
+  100% {
+    background-image: url("/images/salon-site/salon-site3.jpg");
+  }
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.section {
+  padding: 5rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.menu-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu-list li {
+  padding: 0.5rem 0;
+}
+
+.gallery-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-grid img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background: #d4af37;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #b99c30;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.sns-icons a {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: white;
+    display: none;
+  }
+  .menu-open nav ul {
+    display: flex;
+  }
+}
