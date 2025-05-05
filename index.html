@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1>Yuya Takahashi</h1>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="section fade-in">
+      <div class="container">
+        <h2>About</h2>
+        <p class="about-text">
+          初めまして！高橋侑也（たかはしゆうや）です！<br />
+          <br />
+          私のスキルセットは、<strong>HTML</strong>、<strong>CSS</strong>、<strong>JavaScript</strong>、そして<strong>WordPress</strong>を駆使して、<br />
+          高品質なWebサイトを制作しています。<br />
+          <br />
+          クライアントのニーズに合わせた提案を行い、<br />
+          納期厳守で最適なWebソリューションを提供しています。
+        </p>
+        <img src="images/高橋侑也.jpeg" alt="自己紹介画像" class="about-img" />
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section fade-in">
+      <div class="container">
+        <h2>Services</h2>
+        <ul class="cards">
+          <li>
+            <img src="/images/service1.jpg" alt="サービス1" />
+            <p>HTML/CSS/JavaScript</p>
+          </li>
+          <li>
+            <img src="/images/service2.jpg" alt="サービス2" />
+            <p>レスポンシブ対応</p>
+          </li>
+          <li>
+            <img src="/images/service3.jpg" alt="サービス3" />
+            <p>WordPress構築</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Works -->
+    <section id="works" class="section fade-in">
+      <div class="container">
+        <h2>Works</h2>
+        <div class="works-grid">
+          <!-- カフェ -->
+          <div class="work-item" onclick="openModal('modal2')">
+            <img src="/images/cafe-site.jpg" alt="カフェサイト" />
+            <h3>カフェサイト</h3>
+            <p>HTML / CSS / JavaScript</p>
+          </div>
+
+          <!-- モーダル：カフェ -->
+          <div class="modal" id="modal2">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('modal2')">&times;</span>
+              <h3>カフェサイト</h3>
+              <img src="/images/cafe-site-large.jpg" alt="カフェ拡大" />
+              <p>
+                架空のカフェをイメージしたおしゃれなサイト。<br />
+                メニュー、店舗情報、SNSリンク付き。
+              </p>
+              <a
+                href="/works/cafe-site/cafe-site.html"
+                target="_blank"
+                class="modal-link-btn"
+                >サイトを見る</a
+              >
+            </div>
+          </div>
+
+          <!-- 美容室 -->
+          <div class="work-item" onclick="openModal('modal3')">
+            <img src="/images/salon-site.jpg" alt="美容室サイト" />
+            <h3>美容室サイト</h3>
+            <p>HTML / CSS / JavaScript</p>
+          </div>
+
+          <!-- モーダル：美容室 -->
+          <div class="modal" id="modal3">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('modal3')">&times;</span>
+              <h3>美容室サイト</h3>
+              <img src="/images/salon-site-large.jpg" alt="美容室拡大" />
+              <p>
+                スタイリッシュな美容室のLP風サイト。<br />
+                サービス紹介や予約導線も実装済み。
+              </p>
+              <a
+                href="/works/salon-site/salon-site.html"
+                target="_blank"
+                class="modal-link-btn"
+                >サイトを見る</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section fade-in">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>ご依頼・ご相談は以下のメールアドレスへご連絡ください。</p>
+        <p>yuyat.193728@gamail.com</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 yuya takahashi</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
